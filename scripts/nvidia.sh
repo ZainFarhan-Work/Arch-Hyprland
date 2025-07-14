@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing NVIDIA Drivers"
-sudo pacman -S nvidia-dkms nvidia-utils nvidia-settings --noconfirm --needed
+sudo pacman -S linux-headers nvidia-dkms nvidia-utils nvidia-settings --noconfirm --needed
 
 # Ensure MODULES line exists
 if ! grep -q "^MODULES=" /etc/mkinitcpio.conf; then
