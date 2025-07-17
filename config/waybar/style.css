@@ -1,5 +1,5 @@
 * {
-  font-family: "JetBrainsMonoNerdFontMono";
+  font-family: "JetBrains Mono";
   font-weight: bold;
   min-height: 0;
   font-size: 102%;
@@ -8,9 +8,9 @@
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.25);
   transition-property: background-color;
-  transition-duration: 0.5s;
+  transition-duration: .5s;
 }
 
 window#waybar.hidden {
@@ -18,23 +18,23 @@ window#waybar.hidden {
 }
 
 window#waybar.empty {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 window#waybar.empty #window {
-  padding: 0px;
-  border: 0px;
-  background-color: transparent;
+	padding: 0px;
+	border: 0px;
+	background-color: transparent;
 }
 
 tooltip {
-  opacity: 1;
-  border-radius: 0px; /* Removed rounded corners */
+	opacity: 1;
+	border-radius: 10px;
 }
 
-tooltip label {
-  padding: 10px;
-  color: #ebdbb2;
+tooltip label{
+	padding: 10px;
+	color: #ebdbb2;
 }
 
 #custom-cava,
@@ -47,8 +47,8 @@ tooltip label {
 #temperature,
 #workspaces,
 #custom-menu,
-#custom-swaync {
-  border-radius: 0px; /* Removed rounded corners */
+#custom-swaync{
+  border-radius: 10px;
   color: #ebdbb2;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -56,20 +56,20 @@ tooltip label {
   padding-right: 6px;
 }
 
-#window {
+#window{
   color: #ebdbb2;
   padding-top: 3px;
   padding-bottom: 3px;
   padding-right: 6px;
   padding-left: 6px;
-  border-radius: 0px; /* Removed rounded corners */
+  border-radius: 12px;
 }
 
 #workspaces button {
-  margin: 1px;
+	margin: 1px;
   box-shadow: none;
-  text-shadow: none;
-  border-radius: 0px; /* Removed rounded corners */
+	text-shadow: none;
+  border-radius: 12px;
   padding-left: 6px;
   padding-right: 6px;
   background-color: #ebdbb2;
