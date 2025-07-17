@@ -1,0 +1,7 @@
+show=drun
+prompt=Search:
+columns=1
+width=600
+lines=10
+insensitive=true
+term=kitty

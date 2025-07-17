@@ -1,0 +1,48 @@
+{
+    "hyprland/workspaces": {
+	"format": "{name}: {icon}",
+	"format-icons": {
+	    "1": "",
+	    "2": "",
+	    "3": "",
+	    "4": "",
+	    "5": "",
+	    "active": "",
+	    "default": ""
+            },
+
+            "persistent-workspaces": {
+                 "*": 5, // 5 workspaces by default on every monitor
+                 "HDMI-A-1": 3 // but only three on HDMI-A-1
+           }
+
+    },
+
+    "pulseaudio": {
+        "format": " {volume}% {icon} ",
+        "format-bluetooth": " [BT] {volume}% {icon} ",
+        "format-muted": "[MUTE]",
+        "format-icons": {
+            "headphone": "[S]",
+            "hands-free": "[S]",
+            "headset": "[S]",
+            "phone": "[S]",
+            "portable": "[S]",
+            "car": "[S]",
+            "default": ["[S]", "[S]", "[S]", "[S]"],
+            "ignored-sinks": ["Easy Effects Sink"]
+        },
+        "scroll-step": 5.0,
+        "on-click": "pavucontrol -t 3",
+        "tooltip-format": "{icon} {desc} | {volume}%",
+        "smooth-scrolling-threshold": 1
+    },
+
+    "jack": {
+        "format": "DSP {}%",
+        "format-xrun": "{xruns} xruns",
+        "format-disconnected": "DSP off",
+        "realtime": true
+    }
+
+}

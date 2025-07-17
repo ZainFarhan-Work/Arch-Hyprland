@@ -4,7 +4,7 @@
 echo "Updating System"
 sudo pacman -Syu
 echo "Installing Packages"
-sudo pacman -S hyprland waybar kitty rofi --needed
+sudo pacman -S hyprland waybar kitty wofi --needed
 
 # Symbolic Links
 
@@ -12,6 +12,10 @@ mkdir -p ~/.config/hypr
 mkdir -p ~/.config/hypr/env
 
 ln -sf ~/Arch-Hyprland/config/hypr/ ~/.config/hypr/
+ln -sf ~/Arch-Hyprland/config/waybar/ ~/.config/waybar/
+ln -sf ~/Arch-Hyprland/config/wofi/ ~/.config/wofi/
+
+ln -sf ~/Arch-Hyprland/config/wlogout/ ~/.config/wlogout/
 
 # GPU Setup
 echo "Do you want to configure for a NVIDIA GPU? (y/n)"
