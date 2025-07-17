@@ -4,7 +4,16 @@
 echo "Updating System"
 sudo pacman -Syu
 echo "Installing Packages"
-sudo pacman -S hyprland waybar kitty wofi --needed
+sudo pacman -S hyprland waybar kitty wofi --noconfirm --needed
+
+echo "Installing Yay"
+sudo chmod -x ~/Arch-Hyprland/config/scripts/yay-install.sh
+~/Arch-Hyprland/config/scripts/yay-install.sh
+
+echo "Installing AUR Packages"
+yay -S wlogout swww --needed
+
+swww img ~/Arch-Hyprland/wallpapers/anime_skull.png
 
 # Symbolic Links
 
