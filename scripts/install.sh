@@ -13,6 +13,8 @@ sudo chmod -x ~/Arch-Hyprland/config/scripts/yay-install.sh
 echo "Installing AUR Packages"
 yay -S wlogout swww --needed
 
+hyprland
+
 swww img ~/Arch-Hyprland/wallpapers/anime_skull.png
 
 # Symbolic Links
