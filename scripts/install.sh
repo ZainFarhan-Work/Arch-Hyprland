@@ -27,6 +27,8 @@ sudo chmod -x ~/Arch-Hyprland/config/scripts/yay-install.sh
 echo "Installing AUR Packages"
 yay -S wlogout swww --needed
 
+read -r ello
+
 hyprland
 
 swww img ~/Arch-Hyprland/wallpapers/anime_skull.png
@@ -63,5 +65,10 @@ fi
 # Set zsh as default
 echo "Changing Shell"
 # chsh -s /bin/zsh
+
+# SDDM
+echo "Applying SDDM Theme (Experimental)"
+git clone https://github.com/Keyitdev/sddm-astronaut-theme.git
+./sddm-astronaut-theme/setup.sh
 
 echo "Setup done. Reboot or logout to apply Hyprland configs."
