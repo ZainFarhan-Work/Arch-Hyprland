@@ -4,7 +4,21 @@
 echo "Updating System"
 sudo pacman -Syu
 echo "Installing Packages"
-sudo pacman -S hyprland waybar kitty wofi --noconfirm --needed
+sudo pacman -S hyprland waybar kitty wofi brightnessctl playerctl \
+    xdg-desktop-portal-hyprland \
+    wayland wayland-utils \
+    xorg-xwayland \
+    seatd \
+    polkit \
+    dbus \
+    grim slurp \
+    thunar \
+    nautilus \
+    network-manager-applet \
+    alsa-utils pavucontrol \
+    --noconfirm --needed
+    
+#   swaylock swayidle \
 
 echo "Installing Yay"
 sudo chmod -x ~/Arch-Hyprland/config/scripts/yay-install.sh
