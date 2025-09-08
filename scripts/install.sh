@@ -1,4 +1,23 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# shellcheck disable=SC2154
+
+cat <<"EOF"
+-------------------------------------------------
+                        .
+                       / \
+                      /^  \
+                     /  _  \
+                    /  | | ~\
+                   /.-'   '-.\
+-------------------------------------------------
+EOF
+
+scrDir="$(dirname "$(realpath "$0")")"
+# shellcheck disable=SC1091
+if ! source "${scrDir}/global_fn.sh"; then
+    echo "Error: unable to source global_fn.sh..."
+    exit 1
+fi
 
 # Basic setup
 echo "Updating System"
