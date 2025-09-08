@@ -61,3 +61,18 @@ pkg_available() {
         return 1
     fi
 }
+
+# Checks if a package is in the AUR
+aur_available() {
+    local PkgIn=$1
+
+    # If AUR has not been assigned, it will assume Yay
+    aurhlpr=${aurhlpr:-yay}
+
+    # shellcheck disable=SC2154
+    if ${aurhlpr} -Si "${PkgIn}" &>/dev/null; then
+        return 0
+    else
+        return 1
+    fi
+}
