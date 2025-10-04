@@ -40,7 +40,7 @@ sudo pacman -S hyprland waybar kitty wofi brightnessctl playerctl \
 #   swaylock swayidle \
 
 echo "Installing Yay"
-sudo chmod -x ~/Arch-Hyprland/config/scripts/yay-install.sh
+sudo chmod +x ~/Arch-Hyprland/config/scripts/yay-install.sh
 ~/Arch-Hyprland/config/scripts/yay-install.sh
 
 echo "Installing AUR Packages"
@@ -63,13 +63,15 @@ ln -sf ~/Arch-Hyprland/config/wofi/ ~/.config/wofi/
 
 ln -sf ~/Arch-Hyprland/config/wlogout/ ~/.config/wlogout/
 
+ln -sf ~/Arch-Hyprland/config/quickshell/ ~/.config/quickshell/
+
 # GPU Setup
 echo "Do you want to configure for a NVIDIA GPU? (y/n)"
 read -r use_nvidia
 
 if [[ "$use_nvidia" == "y" || "$use_nvidia" == "Y" ]]; then
     
-    sudo chmod -x ~/Arch-Hyprland/config/scripts/nvidia.sh
+    sudo chmod +x ~/Arch-Hyprland/config/scripts/nvidia.sh
 
     ~/Arch-Hyprland/config/scripts/nvidia.sh
 
