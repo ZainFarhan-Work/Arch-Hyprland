@@ -41,8 +41,8 @@ sudo pacman -S hyprland waybar kitty wofi brightnessctl playerctl \
 #   swaylock swayidle \
 
 echo "Installing Yay"
-chmod +x ~/Arch-Hyprland/config/scripts/yay-install.sh
-~/Arch-Hyprland/config/scripts/yay-install.sh
+chmod +x ~/Arch-Hyprland/scripts/yay-install.sh
+~/Arch-Hyprland/scripts/yay-install.sh
 
 echo "Installing AUR Packages"
 yay -S wlogout swww --needed --noconfirm
@@ -65,16 +65,16 @@ read -r use_nvidia
 
 if [[ "$use_nvidia" == "y" || "$use_nvidia" == "Y" ]]; then
     
-    chmod +x ~/Arch-Hyprland/config/scripts/nvidia.sh
+    chmod +x ~/Arch-Hyprland/scripts/nvidia.sh
 
-    ~/Arch-Hyprland/config/scripts/nvidia.sh
+    ~/Arch-Hyprland/scripts/nvidia.sh
 
     echo "Linking NVIDIA environment config"
-    cp ~/Arch-Hyprland/hypr/nvidia.conf ~/Arch-Hyprland/hypr/env/nvidia.conf
+    cp ~/Arch-Hyprland/hypr/Nvidia.conf ~/Arch-Hyprland/hypr/env/Nvidia.conf
 
 else
     echo "Removing NVIDIA environment config if it exists"
-    touch ~/Arch-Hyprland/hypr/env/nvidia.conf # Makes Empty File
+    touch ~/Arch-Hyprland/hypr/env/Nvidia.conf # Makes Empty File
 fi
 
 # Set fish as default
