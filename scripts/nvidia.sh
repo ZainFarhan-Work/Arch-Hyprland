@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo "Installing NVIDIA Drivers"
 sudo pacman -S linux-headers nvidia-dkms nvidia-utils nvidia-settings --noconfirm --needed
 
