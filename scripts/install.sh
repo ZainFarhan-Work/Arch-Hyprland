@@ -41,7 +41,6 @@ sudo pacman -S hyprland waybar kitty wofi brightnessctl playerctl \
 #   swaylock swayidle \
 
 echo "Installing Yay"
-chmod +x ~/Arch-Hyprland/scripts/yay-install.sh
 ~/Arch-Hyprland/scripts/yay-install.sh
 
 echo "Installing AUR Packages"
@@ -51,21 +50,22 @@ yay -S wlogout swww --needed --noconfirm
 rm -rf ~/.config/hypr ~/.config/waybar ~/.config/wofi ~/.config/wlogout ~/.config/quickshell
 
 
-ln -sf ~/Arch-Hyprland/config/hypr/ ~/.config/hypr/
-ln -sf ~/Arch-Hyprland/config/waybar/ ~/.config/waybar/
-ln -sf ~/Arch-Hyprland/config/wofi/ ~/.config/wofi/
+ln -sf ~/Arch-Hyprland/config/hypr/ ~/.config/hypr
+ln -sf ~/Arch-Hyprland/config/waybar/ ~/.config/waybar
+ln -sf ~/Arch-Hyprland/config/wofi/ ~/.config/wofi
 
-ln -sf ~/Arch-Hyprland/config/wlogout/ ~/.config/wlogout/
+ln -sf ~/Arch-Hyprland/config/wlogout/ ~/.config/wlogout
 
-ln -sf ~/Arch-Hyprland/config/quickshell/ ~/.config/quickshell/
+ln -sf ~/Arch-Hyprland/config/quickshell/ ~/.config/quickshell
 
 # GPU Setup
 echo "Do you want to configure for a NVIDIA GPU? (y/n)"
 read -r use_nvidia
 
+mkdir ~/Arch-Hyprland/config/hypr/env
+
 if [[ "$use_nvidia" == "y" || "$use_nvidia" == "Y" ]]; then
-    
-    chmod +x ~/Arch-Hyprland/scripts/nvidia.sh
+
 
     ~/Arch-Hyprland/scripts/nvidia.sh
 
